@@ -1,6 +1,7 @@
 /*반드시 이것부터 선언*/
 @charset "utf-8";
 @import "normalize.css";
+@import "fonts.css";
 
 /*스타일 초기화*/
 /*여백제거 */
@@ -9,7 +10,74 @@ html,body,div,header,nav,section,aside,article,footer,figure,figcaption,ul,ol,li
 	padding: 0;
 }
 
+html{
+	font-size : 10px;
+}
 
+/* 본문 스타일 */
 body{
-    background-color: #ff0;
+    background-color: #ffffff;
+	color : #181818;
+	/*font-size: 0.875em;  16 * 0.875 = 14px */
+	font-size: 1.4rem; /* html 기본 글자크기 * 1.4 = 14px */
+	font-family: 'Noto Sans Regular';
+}
+
+/* 레이아웃 */
+.wrapper{
+	background-color:gray;
+	height: 100vh;
+}
+
+.header, .visual, .main-content, .footer, .slogan{
+	width: 940px;
+	margin : 0 auto;
+}
+
+.header{
+	background-color: yellow;
+	height: 10vh;
+}
+.visual{
+	background-color: lime;
+	height: 10vh;
+}
+
+.main-content{
+	background-color: red;
+	height: 60vh;
+	padding: 30px;
+	box-sizing: border-box; 
+	/*content-box : width + padding + border + margin*/
+	/*border-box : width(padding + border) + margin*/
+	display: flex;
+	justify-content: space-between;
+}
+
+.group1{
+	background-color:pink;
+	width: 250px;
+}
+
+.group2{
+	background-color: orange;
+	width: 380px;
+}
+
+.group3{
+	background-color: aqua;
+	width: 190px;
+}
+
+.slogan{
+	background-color: purple;
+	height: 10vh;
+}
+
+.footer-bg{
+	background-color: olive;
+}
+.footer{
+	background-color: yellow;
+	height: 10vh;
 }
