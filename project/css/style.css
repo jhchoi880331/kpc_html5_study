@@ -103,8 +103,38 @@ body{
 
 /* 메인 메뉴 */
 .main-menu{
-	background-color: orange;
+	background: linear-gradient(to bottom, #eaa22e 0%,#d69028 30%,#d69028 30%,#d69028 30%,#d69028 30%,#207cca 30%,#d69028 30%,#eaa22e 100%);
+	background-color: #eaa22e;
+	border-top:2px solid black;	
+	border-radius: 0 0 5px 5px;
+	padding-left: 225px;
+	height: 45px;
 }
+
+.main-menu > li{
+	float:left;
+}
+
+.main-menu > li > a{
+	color:white;
+	font-family: "Noto Sans Bold";
+	font-size : 1.6rem;	
+	display:block;
+	line-height: 45px;
+	padding : 0 20px;
+	border-left: 1px solid #fff;
+	text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000; /* X, Y, blue, 색 */
+}
+
+.main-menu ul{
+	background-color: pink;
+	position:absolute;
+	display: none;
+}
+
+/*.main-menu > li > ul > li{
+	display:block;
+}*/
 
 /* 비주얼 */
 .visual{	
