@@ -9,75 +9,105 @@ html,body,div,header,nav,section,aside,article,footer,figure,figcaption,ul,ol,li
 	margin: 0;
 	padding: 0;
 }
+/* 숨김콘텐츠 */
+.a11y-hidden{	
+	overflow:hidden;
+	position : relative;
+	clip: rect(0 0 0 0); /* 사격형으로 잘라내는것 (하위버전)*/
+	clip : rect(0, 0, 0 ,0 ); /* 사격형으로 잘라내는것 (상위버전)*/
+	width : 1px; /* 가상요소로 포커스 */
+	height: 1px;
+	margin : -1px;
+	border : 0;
+	padding : 0;
+	/* 상위 기준인데 relative로 설정된것 기준으로 */
+}
 
 html{
 	font-size : 10px;
 }
 
 /* 본문 스타일 */
-body{
-    background-color: #ffffff;
+body{    
 	color : #181818;
 	/*font-size: 0.875em;  16 * 0.875 = 14px */
 	font-size: 1.4rem; /* html 기본 글자크기 * 1.4 = 14px */
 	font-family: 'Noto Sans Regular';
+	background: #fff linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
 }
 
 /* 레이아웃 */
-.wrapper{
-	background-color:gray;
-	height: 100vh;
-}
-
 .header, .visual, .main-content, .footer, .slogan{
 	width: 940px;
 	margin : 0 auto;
+	box-sizing: border-box;
+	border-radius: 0 0 15px 15px; /*상단 왼쪽부터 시계반향으로 */
 }
 
 .header{
-	background-color: yellow;
-	height: 10vh;
+	background-color: #ffffff;
+	padding: 0 30px;
+	height: 110px;
+	position: relative;
 }
-.visual{
-	background-color: lime;
-	height: 10vh;
+
+
+
+.visual{	
+	height: 120px;
 }
 
 .main-content{
-	background-color: red;
-	height: 60vh;
-	padding: 30px;
-	box-sizing: border-box; 
+	background-color: #ffffff;
+	min-height:400px; /*최소높이*/
+	padding: 30px 15px;
+	border-radius: 0 0 15px 15px; /*상단 왼쪽부터 시계반향으로 */
+	/*overflow: hidden;*/
+	/*
+	* 자식의 크기를 알수있게 하는 요소
+	* 단점 : 부모크기 밖으로 자식의 크기가 나가는건 잘리는 현상 발생
+	*/
+	
+	
+	/*메인콘텐츠 크기가 증가한것을 원본 크기에 맞춰 조절*/
 	/*content-box : width + padding + border + margin*/
-	/*border-box : width(padding + border) + margin*/
-	display: flex;
-	justify-content: space-between;
+	/*border-box : width(padding + border) + margin*/	
+}
+/* 
+ : -> 익스플로러 하위버전에서도 호환, :: -> 하위번전 고려X
+*/
+.main-content::after{
+	content: "";
+	display: block;
+	clear: both; 
+	/* 1. 아래로 내려가면서 공간 차지 */
 }
 
-.group1{
-	background-color:pink;
+.group{		
+	float:left;
+	margin : 0 15px;
+}
+
+
+.group1{	
 	width: 250px;
 }
 
-.group2{
-	background-color: orange;
+.group2{	
 	width: 380px;
 }
 
 .group3{
-	background-color: aqua;
 	width: 190px;
 }
 
 .slogan{
-	background-color: purple;
-	height: 10vh;
+	min-height: 100px;
 }
 
-.footer-bg{
-	background-color: olive;
+.footer-bg{	
+	background: #aaa linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
 }
-.footer{
-	background-color: yellow;
-	height: 10vh;
+.footer{	
+	min-height: 100px;
 }
