@@ -67,7 +67,6 @@ body{
 
 .wrapper{
 	background : url(images/bg_flower.png) no-repeat 50% 0;
-
 	/*
 	background-color: #ff0;
 	background-image: url(images/bg_flower.png);
@@ -433,6 +432,28 @@ body{
 .find{
 	float: right;
 }
+
+/* 유효성 검사 배너 링크 */
+.validation{	
+	margin-top:20px;
+}
+
+.validation a{
+	background: url(images/validation_icon.png) no-repeat 20px 50%,
+	linear-gradient(to bottom, #eee, #ccc);
+	background-color: pink;
+	display: block;
+	border : 1px solid #aaa;
+	margin-top: 10px;
+	border-radius: 15px;
+	height: 25px;
+	line-height: 25px;
+	text-indent: 45px;
+}
+
+
+
+
 
 /* 슬로건 */
 .slogan{
