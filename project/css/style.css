@@ -15,6 +15,12 @@ ul{
 	list-style: none;
 }
 
+/* 폼관련 요소의 글자 크기 및 글꼴 */
+input, select, textarea, option, button{
+	font-size : inherit; /* 상속받을거야 */
+	font-family: inherit;
+}
+
 /* 링크 스타일 */
 a:link, a:visited{
 	color : inherit;
@@ -22,7 +28,7 @@ a:link, a:visited{
 }
 
 /* 숨김콘텐츠 */
-.a11y-hidden{	
+.a11y-hidden, legend{	
 	overflow:hidden;
 	position : relative;
 	clip: rect(0 0 0 0); /* 사격형으로 잘라내는것 (하위버전)*/
@@ -38,6 +44,17 @@ a:link, a:visited{
 html{
 	font-size : 10px;
 }
+
+/* 플로트 높이를 잃어버리지 않게 하는것 */
+.main-content::after, .member::after{
+	content: "";
+	display: block;
+	clear: both; 
+	/* 1. 아래로 내려가면서 공간 차지 */
+}
+
+
+
 
 /* 본문 스타일 */
 body{    
@@ -285,13 +302,16 @@ body{
 	
 }
 
-
-/* 메인 컨텐츠 */
+/* 
+ : -> 익스플로러 하위버전에서도 호환, :: -> 하위번전 고려X
+*/
 .main-content{
 	background-color: #ffffff;
 	min-height:400px; /*최소높이*/
 	padding: 30px 15px;
 	border-radius: 0 0 15px 15px; /*상단 왼쪽부터 시계반향으로 */
+
+	
 	/*overflow: hidden;*/
 	/*
 	* 자식의 크기를 알수있게 하는 요소
@@ -303,15 +323,7 @@ body{
 	/*content-box : width + padding + border + margin*/
 	/*border-box : width(padding + border) + margin*/	
 }
-/* 
- : -> 익스플로러 하위버전에서도 호환, :: -> 하위번전 고려X
-*/
-.main-content::after{
-	content: "";
-	display: block;
-	clear: both; 
-	/* 1. 아래로 내려가면서 공간 차지 */
-}
+
 
 .group{		
 	float:left;
@@ -329,6 +341,97 @@ body{
 
 .group3{
 	width: 190px;
+}
+
+
+
+.login{
+	background: radial-gradient(circle at top right, #ffc848, #ff8208);
+	background-color: #ff8208;
+	box-shadow: 5px 5px 5px #999;
+	
+
+
+	padding : 10px;
+	border-radius: 5px; /*상단 왼쪽부터 시계반향으로 */
+	
+}
+.login-form fieldset{
+	border: 0 none;
+	position: relative;	
+	padding-bottom:10px;
+	border-bottom:1px solid #aaa;
+}
+
+.login-subject{
+	font-size : 1.6rem;
+	margin-left : 10px;
+	color: #ff0;
+	font-family: 'Noto Sans Bold';
+}
+
+.login-form{
+	background-color: white;
+	border-radius: 5px 5px 0 0; /*상단 왼쪽부터 시계반향으로 */
+	padding : 10px 10px 0 10px;
+	margin-top: 10px;	
+}
+
+.user-id{
+	margin-bottom: 10px;
+}
+
+.login-form label{		
+	width : 4em;	
+	display: inline-block;
+}
+
+.login-form input{
+	width: 90px;
+	height : 20px;
+	border : 1px solid #aaa;
+	padding : 0;
+}
+
+.btn-login{
+	width : 50px;
+	height : 50px;
+	position: absolute;
+	top: 0;
+	right : 0;
+	background-color:red;
+	font-size : 1.2rem;
+	padding: 2px;
+	font-weight: border;
+	border : 0 none;
+	color:white;
+	border-radius: 5px;
+	float : right;
+	
+}
+
+.member{	
+	border-radius: 0 0 5px 5px;
+	background-color: white;
+	padding : 2px 10px;
+}
+
+.join, .find{
+	padding : 8px 0;
+	letter-spacing: -1px;
+}
+.join::before, .find::before{
+	content: "g";
+	font-family: 'webcafeIcon';
+	color: #f00;
+}
+
+.join{	
+	float: left;
+	
+}
+.find{
+	float: right;
 }
 
 /* 슬로건 */
