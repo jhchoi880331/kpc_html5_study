@@ -45,7 +45,20 @@ body{
 	/*font-size: 0.875em;  16 * 0.875 = 14px */
 	font-size: 1.4rem; /* html 기본 글자크기 * 1.4 = 14px */
 	font-family: 'Noto Sans Regular';
-	background: #fff linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
+	background: #fff linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);	
+}
+
+.wrapper{
+	background : url(images/bg_flower.png) no-repeat 50% 0;
+
+	/*
+	background-color: #ff0;
+	background-image: url(images/bg_flower.png);
+	background-repeat: no-repeat;
+	background-position: 50% 0;	가로, 세로위치
+	background-size: 1200px 500px;
+	background-attachment: fixed;  배경고정 
+	*/
 }
 
 /* 레이아웃 */
@@ -202,9 +215,44 @@ body{
 }*/
 
 /* 비주얼 */
+@keyframes text-ani{ /* 애니메이션 구역 */
+	0%{
+		font-size: 12px;
+		color:rgba(0,0,0,0);
+		transform : translate(0,0);
+	} /* 시작지점 */
+	100%{
+		font-size: 24px;
+		color:rgba(0,0,0,1);
+		transform : translate(400px, 75px);
+	} /* 종료지점 */
+}
 .visual{	
 	height: 120px;
+	position: relative; /*visual-text가 얘를 기준으로 설정하기 위해서*/
 }
+
+.visual-text{
+	/*position: absolute;*/
+	display: inline-block;
+	font-family: Georgia, serif;
+	color:rgba(0,0,0,0);
+	animation : text-ani 0.5s forwards ease-in-out;
+	
+	
+	/*
+	animation-name: text-ani;
+	animation-duration : 5s;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+	animation-iteration-count: 3; 애니메이션 반복횟수
+	animation-direction: alternate; 방향값
+	animation-timing-function: ease-in-out; 느리게 > 중간 가속 > 서서히 멈춤효과
+	animation-play-state: paused;
+	*/
+	
+}
+
 
 /* 메인 컨텐츠 */
 .main-content{
