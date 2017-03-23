@@ -49,7 +49,7 @@ html{
 .main-content::after, .member::after, .term-list::after{
 	content: "";
 	display: block;
-	clear: both; 
+	clear: both; /* 양쪽에 강제 마진 추가 */ 
 	/* 1. 아래로 내려가면서 공간 차지 */
 }
 
@@ -544,6 +544,94 @@ body{
 	margin-bottom:10px;
 }
 */
+
+
+/* 웹 카페 검색 */
+.search{	
+	border : 1px solid #aaa;
+	border-bottom : 0;
+	border-radius: 25px 25px 0 0;
+	background: linear-gradient(to bottom, #ccc, #fff);
+	background-color: #ccc;	
+	padding : 20px 25px 5px;		
+}
+
+.search-form fieldset{
+	border:0;
+}
+
+.search-form label::before{
+	content: "z";	
+	font-family: 'webcafeIcon';
+	position: relative;
+	top:2px;
+	margin-right : 3px;	
+}
+
+.search-form input{
+	border : 1px solid #aaa;
+	border-radius: 3px;
+	width : 200px;
+	height : 20px;
+	padding : 1px 1px 1px 5px;
+	font-size : 1.3rem;
+	margin : 0 4px 0 3px;
+}
+
+.btn-search{
+	border : 1px solid #aaa;
+	border-radius: 3px;
+	background: linear-gradient(to bottom, #999, #333);
+	background-color: #333;	
+	height: 22px;
+	padding: 1px 10px;
+	color:white;
+	font-size : 1.3rem;
+}
+
+
+/*
+.search{	
+	background: linear-gradient(to bottom, #eee, #ccc);
+	background-color: #ccc;	
+	width : 379px;
+	height:41px;		
+	border-radius: 5px 5px 0 0;	
+}
+
+.search fieldset{	
+	float : left;
+	border:none;
+	padding : 15px 15px 0 15px;
+}
+
+.search label{	
+	margin-right : 2px;		
+}
+.search input {
+	
+	width : 202px;
+	height : 22px;
+	border : 1px solid gray;
+	margin-right : 2px;		
+	border-radius: 3px;
+}
+
+.btn-search{
+	background: linear-gradient(to bottom, gray, black);
+	width : 44px;
+	height : 23px;
+	color:white;
+	background-color: #ccc;	
+}
+
+.search label::before{
+	content: "s";
+	font-family: 'webcafeIcon';
+	color: black;
+}
+*/
+
 
 /* 슬로건 */
 .slogan{
