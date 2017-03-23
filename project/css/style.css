@@ -46,7 +46,7 @@ html{
 }
 
 /* 플로트 높이를 잃어버리지 않게 하는것 */
-.main-content::after, .member::after{
+.main-content::after, .member::after, .term-list::after{
 	content: "";
 	display: block;
 	clear: both; 
@@ -451,9 +451,99 @@ body{
 	text-indent: 45px;
 }
 
+/* 웹관련 용어 */
+.term{
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	background: linear-gradient(to bottom, #eee, #ccc);
+	background-color: #ccc;
+	padding : 15px;
+	margin-top: 20px;
+}
+
+.term-subject{	
+	font-family: "Noto Sans Bold";
+	font-size: 1.6rem;
+}
+
+.term a{
+	display: block;
+	margin-top : 15px;
+}
 
 
+.term-list-subject, .term-list-brief{	
+	width:145px;
+	float:right;
+}
 
+.term-list-subject{
+	color: #296899;
+	font-weight: bold;
+	margin-top : -2px;
+}
+
+.term-list-thumbnail{	
+	float:left;
+}
+
+.term-list-brief{
+	line-height: 1.5;
+	margin-top: 10px;
+}
+
+.term-list-thumbnail img{
+	display: block;
+}
+
+
+/*
+.term{
+	font-family: "Noto Sans Bold";	
+	background: linear-gradient(to bottom, #eee, #ccc);
+	background-color: #ccc;
+	margin-top : 22px;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+.term-subject{
+	padding : 19px 23px;	
+}
+
+.term-list-subject{
+	position: absolute;
+	color:blue;
+}
+
+.term-list{
+	position: relative;
+}
+
+.term-list img{
+	display: inline-block;	
+}
+
+.term-list-subject{
+	position: absolute;
+	left:98px;
+}
+
+.term-list-thumbnail{
+	
+	padding-left:24px;
+	padding-right:24px;
+	padding-bottom:20px;
+	
+}
+
+.term-list-brief{	
+	top:21px;
+	left:98px;
+	position: absolute;
+	margin-bottom:10px;
+}
+*/
 
 /* 슬로건 */
 .slogan{
