@@ -677,9 +677,31 @@ body{
 	background: #fff;
 }
 
-.notice-list, .pds-list{
-	background-color: pink;
+.notice-list, .pds-list{	
 	padding-top:45px;
+}
+
+.notice-list li, .pds-list li{	
+	/*padding-top:45px;*/
+	margin : 8px 0;
+}
+.notice-list li::before, .pds-list li::before{
+	content:"r";
+	font-family: 'webcafeIcon';	
+	margin-right : 3px;
+}
+
+.board-headline{	
+	display: inline-block;
+	width : 285px;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.board-date{	
+	float:right;
 }
 
 .notice-more, .pds-more{
@@ -697,6 +719,62 @@ body{
 	color: #36ff87;
 	margin-right:3px;
 }
+
+
+
+
+/* 새소식 */
+.news{		
+	position: relative;
+	margin-top : 20px;
+	background-color: yellow;
+	
+}
+
+.news-subject{		
+	color:#fa4306;
+	font-size: 1.6rem;
+	font-family: 'Noto Sans Bold';	
+}
+
+.news-more{	
+	background-color: red;
+	position: absolute;
+	top: 0;
+	right : -8px;
+	padding: 8px;
+}
+
+.news-more::before{
+	content: "p";
+	font-family: 'webcafeIcon';
+	position: relative;
+	top:2px;
+	color: #36ff87;
+	margin-right:3px;
+}
+
+.news-item{
+	background-color: pink;
+	padding-left : 130px;		
+	margin-top : 30px;
+	position: relative;
+}
+.news-item figure{	
+	position: ;
+	top:0;
+	left:0;
+	text-align: center;
+}
+
+.news-item img{
+	margin-bottom : 15px;
+	box-shadow: 0 10px 10px 0 #ccc;
+}
+
+
+
+
 
 
 
