@@ -1205,6 +1205,65 @@ body {
 
 /* 푸터 */
 
+.footer-logo {
+    background-color: yellow;
+}
+
+.guide-list {
+    background: #aaa linear-gradient(to bottom, #aaa #fff);
+    background-color: #aaa;
+    font-size: 0;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 13px;
+    left: 170px;
+    width: 642px;
+}
+
+.guide-list li {
+    margin: 10px 0;
+    top: 0;
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.guide-list a {
+    color: white;
+}
+
+.guide-list li:nth-child(n+2):before {
+    content: "|";
+}
+
+.guide-list a {
+    padding: 5px 8px;
+}
+
+.footer address {
+    position: absolute;
+    background-color: red;
+}
+
+.footer address span {
+    padding-left: 10px;
+    margin: 0 auto;
+}
+
+.tech-logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+}
+
+.copyright {
+    position: absolute;
+    background-color: red;
+    top: 43px;
+    left: 170px;
+}
+
 .footer-bg {
     background: #aaa linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
 }
@@ -1212,4 +1271,7 @@ body {
 .footer {
     background: #aaa linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
     min-height: 100px;
+    padding-top: 60px;
+    padding-left: 36px;
+    position: relative;
 }
